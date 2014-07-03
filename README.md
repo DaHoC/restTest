@@ -17,4 +17,10 @@ For example, import into Eclipse as Dynamic Web Project, and run on server. Test
 ### Client
 
 Run ClientTest in the project as java application and watch the output of the program.
-The web browser can also be used as client, where the URL is [HOST]:[PORT]/de.janhendriks.rest.server/palindrom/[INPUTSTRING]
+
+The web browser can also be used as client, where the URL is 
+	[HOST]:[PORT]/de.janhendriks.rest.server/palindrom/[INPUTSTRING]
+
+Possible command-line arguments: -host [address] -port [port] -baseurl [baseurl]
+
+Default command-line arguments: -host 127.0.0.1 -port 8180 -baseurl de.janhendriks.rest.server
