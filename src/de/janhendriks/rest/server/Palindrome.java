@@ -10,14 +10,12 @@ import javax.ws.rs.core.UriInfo;
 
 import com.sun.jersey.spi.resource.Singleton;
 
-//Plain old Java Object it does not extend as class or implements
-//an interface
-
-//The class registers its methods for the HTTP GET request using the @GET annotation.
-//Using the @Produces annotation, it defines that it can deliver several MIME types,
-//text, XML and HTML.
-
-//The browser requests per default the HTML MIME type.
+/**
+ * Responsible for answering incoming palindrome check requests accordingly.
+ * The class registers its methods for the HTTP GET request using the @GET annotation.
+ * Using the @Produces annotation, it defines that it can deliver several MIME types, text, XML and HTML.
+ * The browser requests per default the HTML MIME type.
+ */
 @Singleton
 @Path("/palindrom")
 public class Palindrome {
@@ -45,7 +43,7 @@ public class Palindrome {
         return uriInfo.getBaseUri().getHost() + ":" + uriInfo.getBaseUri().getPort() + uriInfo.getBaseUri().getPath();
     }
 
-    // This method is called if TEXT_PLAIN is request
+    // This method is called if TEXT_PLAIN is requested
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/{inText}")
@@ -53,24 +51,24 @@ public class Palindrome {
         return inText + " ist palindrom: " + Boolean.toString(isPalindrome(inText));
     }
 
-    // This method is called if XML is request
+    // This method is called if XML is requested
     @GET
     @Produces(MediaType.TEXT_XML)
     @Path("/{inText}")
     public final String checkForPalindromeXML(@PathParam("inText") final String inText) {
-        return UTF8HEADER + "<palindrome value=" + Boolean.toString(isPalindrome(inText)) + "> " + inText + "</palindrome>";
+        return UTF8HEADER + "<palindrome value=" + Boolean.toString(isPalindrome(inText)) + ">" + inText + "</palindrome>";
     }
 
-    // This method is called if HTML is request
+    // This method is called if HTML is requested
     @GET
     @Produces(MediaType.TEXT_HTML)
     @Path("/{inText}")
     public final String checkForPalindromeHTML(@PathParam("inText") final String inText) {
-        return UTF8HEADER + "<html> " + "<title>Palindromcheck</title>"
+        return UTF8HEADER + "<html><title>Palindromcheck</title>"
                 + "<body><h1>" + inText + " ist " + (isPalindrome(inText) ? "ein" : "kein") + " Palindrom!" + "</body></h1></html> ";
     }
 
-    // This method is called if HTML is request
+    // This method is called if HTML without palindrome input string is requested
     @GET
     @Produces(MediaType.TEXT_HTML)
     public final String welcomePalindrome() {
@@ -79,6 +77,5 @@ public class Palindrome {
         return UTF8HEADER + "<html><title>Palindromcheck</title>"
         + "<body><h1>" + "Test auf Palindrom, zu prüfendes Wort an die URL hinter " + palindromeCheckPath + " anhängen, z.B. <a href=\"" + examplePalindrome + "\">" + getAbsoluteBaseUrl() + palindromeCheckPath + examplePalindrome + "</a></body></h1></html>";
     }
-
 
 }
