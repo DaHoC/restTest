@@ -26,7 +26,7 @@ public class Palindrome {
     private UriInfo uriInfo;
 
     // Header to indicate UTF8 output
-    final static String UTF8HEADER = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";
+    final static String UTF8HEADER = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
     /**
      * Checks if input text is a palindrome.
