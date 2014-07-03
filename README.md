@@ -8,11 +8,16 @@ The program uses [Jersey](http://jersey.java.net/) as library for REST functiona
 
 Checks if a passed in string via URL is a palindrome and outputs accordingly with the ability to provide different output formats such as plain text, XML, HTML.
 
+## Setup 
+
+Retrieve the source code via tarball or git clone.
+Import into e.g. Eclipse as Dynamic Web Project. 
+
 ## Usage
 
 ### Server
 
-For example, import into Eclipse as Dynamic Web Project, and run on server. Tested with Apache Tomcat 6.0.35.
+Deploy and run on server. Tested with Apache Tomcat 6.0.35.
 
 ### Client
 
