@@ -18,7 +18,7 @@ import com.sun.jersey.api.client.config.DefaultClientConfig;
 public final class ClientTest {
 
     private static String SERVER_ADDRESS = "127.0.0.1";
-    private static int SERVER_PORT = 8180;
+    private static int SERVER_PORT = 8080;
     private static String SERVER_BASE_URL = "RestTest";
 
     private static StringBuilder values = new StringBuilder("testset");
