@@ -29,3 +29,12 @@ The web browser can also be used as client, where the URL is
 Possible command-line arguments: -host [address] -port [port] -baseurl [baseurl] [values]
 
 Default command-line arguments: -host 127.0.0.1 -port 8180 -baseurl RestTest testset
+
+## Contact
+Jan Hendriks (dahoc3150 [at] yahoo.com)
+
+## Terms of use
+
+This program is to be used as an example and is provided on an "as-is" basis without any warranties of any kind, either express or implied.
+Use at your own risk.
+For used third-party software, refer to their respective terms of use and licensing
