@@ -15,7 +15,7 @@ import com.sun.jersey.api.client.config.DefaultClientConfig;
 /**
  * Client for interfacing the RESTful palindrome web service.
  */
-public class ClientTest {
+public final class ClientTest {
 
     private static String SERVER_ADDRESS = "127.0.0.1";
     private static int SERVER_PORT = 8180;
@@ -29,7 +29,7 @@ public class ClientTest {
      */
     public static void main(String[] args) {
         System.out.println("Starting client...");
-        /// Parse and set command-line arguments
+        // Parse and set command-line arguments
         try {
             parseCommandLineArguments(args);
         } catch (IllegalArgumentException iae) {
@@ -41,6 +41,7 @@ public class ClientTest {
         final Client client = Client.create(config);
         try {
             final WebResource service = client.resource(getBaseURI());
+            // These are the actual calls to the RESTful service
             System.out.println(service.path("palindrom").path(values.toString()).accept(MediaType.TEXT_PLAIN).get(String.class));
             System.out.println(service.path("palindrom").path(values.toString()).accept(MediaType.TEXT_XML).get(String.class));
             System.out.println(service.path("palindrom").path(values.toString()).accept(MediaType.TEXT_HTML).get(String.class));
@@ -67,7 +68,7 @@ public class ClientTest {
      */
     private static void parseCommandLineArguments(final String[] args) throws IllegalArgumentException {
         if (args.length == 0) {
-            /// Give a little help
+            // Give a little help
             System.out.println("Possible command-line arguments: -host [address] -port [port] -baseurl [baseurl]");
             // System.out.println("Default command-line arguments: -host " + SERVER_ADDRESS + " -port " + Integer.toString(SERVER_PORT) + " -baseurl " + SERVER_BASE_URL);
             return;
@@ -77,11 +78,11 @@ public class ClientTest {
         while(argsIter.hasNext()) {
             String val = argsIter.next();
             if ("-host".equals(val)) {
-                // then the following should be the address (-host localhost)
+                // Then the following should be the address (-host localhost)
                 SERVER_ADDRESS = argsIter.next();
                 System.out.println("Set host to: " + SERVER_ADDRESS);
             } else if ("-port".equals(val)) {
-                // then the following should be the port (-port 8080)
+                // Then the following should be the port (-port 8080)
                 final String portNum = argsIter.next();
                 try {
                     SERVER_PORT = Integer.parseInt(portNum);
@@ -94,7 +95,7 @@ public class ClientTest {
                 SERVER_BASE_URL = argsIter.next();
                 System.out.println("Set baseurl to: " + SERVER_BASE_URL);
             } else {
-                // it's a value
+                // It's a value
                 if (values.length() > 0) {
                     values.append(" ");
                 }

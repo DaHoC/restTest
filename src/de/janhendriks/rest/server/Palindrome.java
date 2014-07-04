@@ -18,7 +18,7 @@ import com.sun.jersey.spi.resource.Singleton;
  */
 @Singleton
 @Path("/palindrom")
-public class Palindrome {
+public final class Palindrome {
 
     @Context
     private UriInfo uriInfo;
