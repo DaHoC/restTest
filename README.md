@@ -21,7 +21,7 @@ Deploy and run on server. Tested with Apache Tomcat 6.0.35.
 
 ### Client
 
-Run ClientTest in the project as java application and watch the output of the program.
+Run ClientTest in the project as java application (Right-click on de.janhendriks.rest.client.ClientTest.java > Run As > Java Application) and watch the output of the program.
 
 The web browser can also be used as client, where the URL is 
 	[HOST]:[PORT]/[BASEURL]/palindrom/[INPUTSTRING]
