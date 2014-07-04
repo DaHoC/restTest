@@ -24,8 +24,8 @@ Deploy and run on server. Tested with Apache Tomcat 6.0.35.
 Run ClientTest in the project as java application and watch the output of the program.
 
 The web browser can also be used as client, where the URL is 
-	[HOST]:[PORT]/de.janhendriks.rest.server/palindrom/[INPUTSTRING]
+	[HOST]:[PORT]/[BASEURL]/palindrom/[INPUTSTRING]
 
 Possible command-line arguments: -host [address] -port [port] -baseurl [baseurl]
 
-Default command-line arguments: -host 127.0.0.1 -port 8180 -baseurl de.janhendriks.rest.server
+Default command-line arguments: -host 127.0.0.1 -port 8180 -baseurl RestTest

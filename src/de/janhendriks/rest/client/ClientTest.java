@@ -19,7 +19,7 @@ public class ClientTest {
 
     private static String SERVER_ADDRESS = "127.0.0.1";
     private static int SERVER_PORT = 8180;
-    private static String SERVER_BASE_URL = "de.janhendriks.rest.server";
+    private static String SERVER_BASE_URL = "RestTest";
 
     /**
      * Main client program entry point.

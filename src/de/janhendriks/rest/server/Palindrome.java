@@ -75,7 +75,7 @@ public class Palindrome {
         final String examplePalindrome = "testset";
         final String palindromeCheckPath = "palindrom/";
         return UTF8HEADER + "<html><title>Palindromcheck</title>"
-        + "<body><h1>" + "Test auf Palindrom, zu prüfendes Wort an die URL hinter " + palindromeCheckPath + " anhängen, z.B. <a href=\"" + examplePalindrome + "\">" + getAbsoluteBaseUrl() + palindromeCheckPath + examplePalindrome + "</a></body></h1></html>";
+        + "<body><h1>" + "Test auf Palindrom, zu prüfendes Wort an die URL hinter " + palindromeCheckPath + " anhängen, z.B. <a href=\"" + palindromeCheckPath + examplePalindrome + "\">" + getAbsoluteBaseUrl() + palindromeCheckPath + examplePalindrome + "</a></body></h1></html>";
     }
 
 }
