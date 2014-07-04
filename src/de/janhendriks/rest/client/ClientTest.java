@@ -21,9 +21,11 @@ public class ClientTest {
     private static int SERVER_PORT = 8180;
     private static String SERVER_BASE_URL = "RestTest";
 
+    private static StringBuilder values = new StringBuilder("testset");
+
     /**
      * Main client program entry point.
-     * @param args -host [address] -port [port] -baseurl [baseurl]
+     * @param args -host [address] -port [port] -baseurl [baseurl] [values]
      */
     public static void main(String[] args) {
         System.out.println("Starting client...");
@@ -39,9 +41,9 @@ public class ClientTest {
         final Client client = Client.create(config);
         try {
             final WebResource service = client.resource(getBaseURI());
-            System.out.println(service.path("palindrom").path("testset").accept(MediaType.TEXT_PLAIN).get(String.class));
-            System.out.println(service.path("palindrom").path("testset").accept(MediaType.TEXT_XML).get(String.class));
-            System.out.println(service.path("palindrom").path("testset").accept(MediaType.TEXT_HTML).get(String.class));
+            System.out.println(service.path("palindrom").path(values.toString()).accept(MediaType.TEXT_PLAIN).get(String.class));
+            System.out.println(service.path("palindrom").path(values.toString()).accept(MediaType.TEXT_XML).get(String.class));
+            System.out.println(service.path("palindrom").path(values.toString()).accept(MediaType.TEXT_HTML).get(String.class));
         } catch (com.sun.jersey.api.client.ClientHandlerException che) {
             System.err.println("Error: Server at port not accessible: " + che.getLocalizedMessage());
         } catch (com.sun.jersey.api.client.UniformInterfaceException uie) {
@@ -91,6 +93,12 @@ public class ClientTest {
             } else if ("-baseurl".equals(val)) {
                 SERVER_BASE_URL = argsIter.next();
                 System.out.println("Set baseurl to: " + SERVER_BASE_URL);
+            } else {
+                // it's a value
+                if (values.length() > 0) {
+                    values.append(" ");
+                }
+                values.append(val);
             }
         }
     }

@@ -26,6 +26,6 @@ Run ClientTest in the project as java application (Right-click on de.janhendriks
 The web browser can also be used as client, where the URL is 
 	[HOST]:[PORT]/[BASEURL]/palindrom/[INPUTSTRING]
 
-Possible command-line arguments: -host [address] -port [port] -baseurl [baseurl]
+Possible command-line arguments: -host [address] -port [port] -baseurl [baseurl] [values]
 
-Default command-line arguments: -host 127.0.0.1 -port 8180 -baseurl RestTest
+Default command-line arguments: -host 127.0.0.1 -port 8180 -baseurl RestTest testset
