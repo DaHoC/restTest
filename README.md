@@ -10,8 +10,8 @@ Checks if a passed in string via URL is a palindrome and outputs accordingly wit
 
 ## Setup 
 
-Retrieve the source code via tarball or git clone.
-Import into e.g. Eclipse as Dynamic Web Project. 
+* Retrieve the source code via zip or git clone
+* Import into e.g. Eclipse as existing project or new Dynamic Web Project and set Dynamic Web Module 2.5 and Java 1.6 (Project > Properties > Project Facets) 
 
 ## Usage
 
