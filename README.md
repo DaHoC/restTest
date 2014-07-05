@@ -31,7 +31,7 @@ Possible command-line arguments: -host [address] -port [port] -baseurl [baseurl]
 Default command-line arguments: -host 127.0.0.1 -port 8080 -baseurl RestTest testset
 
 ## Contact
-Jan Hendriks (dahoc3150 [at] yahoo.com)
+Jan Hendriks (dahoc3150 [at] gmail.com)
 
 ## Terms of use
 
