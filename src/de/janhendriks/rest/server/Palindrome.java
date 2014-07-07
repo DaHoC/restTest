@@ -65,7 +65,7 @@ public final class Palindrome {
     @Path("/{inText}")
     public final String checkForPalindromeHTML(@PathParam("inText") final String inText) {
         return UTF8HEADER + "<html><title>Palindromcheck</title>"
-                + "<body><h1>" + inText + " ist " + (isPalindrome(inText) ? "ein" : "kein") + " Palindrom!" + "</body></h1></html> ";
+                + "<body><h1>" + inText + " ist " + (isPalindrome(inText) ? "ein" : "kein") + " Palindrom!" + "</h1></body></html> ";
     }
 
     // This method is called if HTML without palindrome input string is requested
@@ -75,7 +75,7 @@ public final class Palindrome {
         final String examplePalindrome = "testset";
         final String palindromeCheckPath = "palindrom/";
         return UTF8HEADER + "<html><title>Palindromcheck</title>"
-        + "<body><h1>" + "Test auf Palindrom, zu prüfendes Wort an die URL hinter " + palindromeCheckPath + " anhängen, z.B. <a href=\"" + palindromeCheckPath + examplePalindrome + "\">" + getAbsoluteBaseUrl() + palindromeCheckPath + examplePalindrome + "</a></body></h1></html>";
+        + "<body><h1>" + "Test auf Palindrom, zu prüfendes Wort an die URL hinter " + palindromeCheckPath + " anhängen, z.B. <a href=\"" + palindromeCheckPath + examplePalindrome + "\">" + getAbsoluteBaseUrl() + palindromeCheckPath + examplePalindrome + "</a></h1></body></html>";
     }
 
 }
