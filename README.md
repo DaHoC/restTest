@@ -11,7 +11,13 @@ Checks if a passed in string via URL is a palindrome and outputs accordingly wit
 ## Setup 
 
 * Retrieve the source code via zip or git clone
-* Import into e.g. Eclipse as existing project or new Dynamic Web Project and set Dynamic Web Module 2.5 and Java 1.6 (Project > Properties > Project Facets) 
+* Import into e.g. Eclipse as existing project or new Dynamic Web Project:
+	* New Dynamic Web Project approach:
+		* Set Dynamic Web Module 2.5 and Java 1.6 (Project > Properties > Project Facets)
+		* Adjust Project > Properties > Targeted Runtime > Server to the Server of your choice.
+	* Existing project approach: 
+		* Adjust Project > Properties > Targeted Runtime > Server to the Server of your choice.
+		* Maybe the JDK version (Project > Properties > Java Compiler > Compiler Compliance Level) has to be reset to 1.6
 
 ## Usage
 
